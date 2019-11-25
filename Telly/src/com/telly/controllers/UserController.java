@@ -24,9 +24,10 @@ public class UserController {
 
 	@Autowired
 	UserService userService;
-	
+
 	@Autowired
 	ReserveService reserveService;
+
 
 	@RequestMapping(value = "/reservebook", method = RequestMethod.POST)
 	public String createReserveBook(@Validated(FormValidationGroup.class) Reserve reserve, BindingResult result, Principal principal) {
@@ -45,6 +46,10 @@ public class UserController {
 
 	}
 	
+
+	@RequestMapping(value = "/getreservations", method = RequestMethod.GET)
+	public String getReserveBook(@Validated(FormValidationGroup.class) Reserve reserve, Model model, Principal principal) {
+
 
 	
 
